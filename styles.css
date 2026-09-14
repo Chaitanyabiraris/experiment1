@@ -1,0 +1,20 @@
+:root{
+  --bg:#09121a;
+  --panel:#0f2430;
+  --accent:#4fffd6;
+  --text:#bff7ef;
+  --muted:#7fb3aa;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:"Press Start 2P", monospace;background:linear-gradient(180deg,var(--bg),#051017);color:var(--text)}
+.center{max-width:900px;margin:32px auto;padding:16px;text-align:center}
+.title{font-size:20px;letter-spacing:2px;margin:8px 0;color:var(--accent)}
+.controls{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:12px}
+.controls select, .controls button{font-family:inherit;padding:8px;border-radius:6px;background:var(--panel);color:var(--text);border:1px solid rgba(255,255,255,0.04)}
+.game-wrap{display:inline-block;padding:14px;background:linear-gradient(180deg,#07141a, #0b2a30);border-radius:8px;border:2px solid rgba(255,255,255,0.04)}
+canvas{display:block;background:#00121a;margin:0 auto;image-rendering:pixelated;border:4px solid #042022}
+.scoreboard{display:flex;justify-content:space-between;gap:16px;margin-top:10px}
+.score{flex:1;background:rgba(255,255,255,0.02);padding:8px;border-radius:6px;color:var(--accent);font-size:18px}
+.hint{color:var(--muted);font-size:10px;margin-top:8px}
+.credit{font-size:10px;color:var(--muted);margin-top:16px}
