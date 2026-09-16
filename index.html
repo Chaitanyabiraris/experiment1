@@ -3,46 +3,55 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Retro Ping Pong</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Neumorphic Ping Pong</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="center">
-    <h1 class="title">RETRO PING PONG</h1>
+  <main class="container">
+    <h1 class="title">PING PONG</h1>
 
-    <div class="controls">
-      <label>
-        Mode:
+    <div class="controls-section">
+      <div class="control-group">
+        <label for="mode">Mode:</label>
         <select id="mode">
           <option value="single">Single Player (vs CPU)</option>
           <option value="two">Two Players</option>
         </select>
-      </label>
+      </div>
 
-      <label>
-        Difficulty:
+      <div class="control-group">
+        <label for="difficulty">Difficulty:</label>
         <select id="difficulty">
           <option value="easy">Easy</option>
           <option value="normal" selected>Normal</option>
           <option value="hard">Hard</option>
         </select>
-      </label>
+      </div>
 
-      <button id="startBtn">Start Game</button>
-      <button id="resetBtn">Reset Scores</button>
+      <button id="startBtn" class="btn btn-primary">Start Game</button>
+      <button id="resetBtn" class="btn btn-secondary">Reset Scores</button>
     </div>
 
-    <div class="game-wrap">
-      <canvas id="game" width="640" height="360"></canvas>
+    <div class="game-container">
+      <canvas id="game" width="800" height="400"></canvas>
+      
       <div class="scoreboard">
-        <div class="score" id="leftScore">0</div>
-        <div class="score" id="rightScore">0</div>
+        <div class="score-box">
+          <span class="score-label">Player 1</span>
+          <div class="score-display" id="leftScore">0</div>
+        </div>
+        <div class="vs-text">VS</div>
+        <div class="score-box">
+          <span class="score-label">Player 2</span>
+          <div class="score-display" id="rightScore">0</div>
+        </div>
       </div>
     </div>
 
-    <p class="hint">Left: W / S &nbsp; • &nbsp; Right: ↑ / ↓</p>
-    <footer class="credit">Made with <span>⚡</span> — Retro style</footer>
+    <div class="info-section">
+      <p class="hint"><strong>Controls:</strong> Left Player: W (up) / S (down) | Right Player: ↑ (up) / ↓ (down)</p>
+      <p class="status" id="gameStatus">Click "Start Game" to begin</p>
+    </div>
   </main>
 
   <script src="script.js"></script>
